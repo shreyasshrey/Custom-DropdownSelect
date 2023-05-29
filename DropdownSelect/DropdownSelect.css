@@ -1,0 +1,222 @@
+.dd-container {
+  text-align: left;
+  border: 1px solid #ccc;
+  position: relative;
+  border-radius: 4px;
+  /* width: 280px; */
+  max-width: 280px;
+}
+
+.dd-header {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+.dd-title {
+  width: calc(100% - 24px);
+  border-right: 1px solid grey;
+}
+.dd-action {
+  display: flex;
+}
+.dd-list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: #ffffff;
+  /* box-shadow: 1px 0px 0px #999999, -1px 0px 0px #999999, 0px 1px 0px #999999; */
+  border-radius: 0px 0px 5px 5px;
+  padding: 0;
+  margin: 0;
+  /* border-top: 1px solid #999; */
+  /* overflow-y: auto; */
+  /* height: 237px; */
+  transform: translateY(1px);
+  width: 100%;
+  border: 1px solid #ccc;
+  /* border-radius: 5px; */
+  overflow: auto;
+  max-height: 150px;
+  /* background-color: #fff; */
+  z-index: 99;
+  color: #000000;
+}
+.dd-search {
+  padding: 5px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #666666;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+.dd-search.fixed {
+  position: sticky;
+  top: 0;
+}
+.dd-search > input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 3px;
+}
+.dd-search > svg {
+  display: flex;
+  margin-left: -25px;
+}
+.dd-list > li {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  cursor: default;
+}
+.dd-list-item {
+  font-size: 14px;
+  line-height: 17px;
+  color: #222222;
+}
+.dd-value {
+  display: flex;
+  /* justify-content: space-between; */
+  font-size: 14px;
+  padding: 10px;
+  border: 0;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  background-color: white;
+}
+.dd-value-check {
+  display: flex;
+}
+.dd-list > li > .dd-value {
+  color: #222222;
+}
+.dd-list > li > .dd-value.selected {
+  /* background-color: #003da5; */
+  background-color: #3a83ff;
+  color: #fff;
+}
+.dd-value:hover {
+  background-color: #deebff;
+  color: #222222;
+}
+.dd-value > span {
+  margin: 0 0 0 5px;
+}
+.dd-item-no-data {
+  font-size: 14px;
+  padding: 15px 20px 15px 15px;
+  margin: 0 0 0 5px;
+}
+
+.dd-tags {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 5px;
+  overflow: scroll;
+}
+
+.dd-tag-item {
+  background-color: #ddd;
+  padding: 2px 4px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.dd-tag-close {
+  display: flex;
+  align-items: center;
+}
+.dd-placeholder {
+  /* color: #a3a3a3; */
+  color: #a8a8a8;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: darkgrey;
+  /* outline: 1px solid slategrey; */
+}
+.dd-tags::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  border-radius: 5px;
+}
+.dd-tags::-webkit-scrollbar-track {
+  border-radius: 5px;
+  height: 0px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+/* customising the checkbox */
+
+/* input[type="checkbox"] {
+  display: none;
+} */
+
+/* .dd-check {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border: 1px solid #222222;
+} */
+
+/* specify the background color to be shown when hovering over checkbox */
+/* .dd-value:hover input ~ .dd-check {
+} */
+
+/* specify the background color to be shown when checkbox is active */
+/* .dd-value input:active ~ .dd-check {
+  background-color: white;
+} */
+
+/* specify the background color to be shown when checkbox is checked */
+/* .dd-value input:checked ~ .dd-check {
+  background-color: white;
+  border: 1px solid black;
+} */
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+/* .dd-check:after {
+  content: "";
+  position: absolute;
+  display: none;
+} */
+
+/* Display checkmark when checked */
+/* .dd-value input:checked ~ .dd-check:after {
+  display: block;
+} */
+
+/* Styling the checkmark using webkit */
+/* .dd-value .dd-check:after {
+  left: 4px;
+  bottom: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+} */
